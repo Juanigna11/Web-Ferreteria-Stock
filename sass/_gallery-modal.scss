@@ -1,0 +1,52 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.modal-gallery{
+   
+   width: 546px;
+    &__background{
+      @include mixins.modal-background;
+      display: none;
+      place-content: center;
+              
+   }
+   &__close-container{
+      text-align: right;
+      height: 30px;
+   }
+   &__close{
+      width: 16px;
+      &:hover{
+         cursor: pointer;
+      }
+   }
+   &__image-container{
+      background-image: url("../imagenes/taladro-bosch-1.png");
+      height: 556px;
+      background-size: cover;
+      border-radius: 16px;
+      margin-bottom: 32px;  
+      position: relative;
+   }
+   &__thumnails{
+      display: flex;
+      justify-content: space-between;
+      width: 550px;
+      margin: auto;
+   }
+   &__thumnail{
+      width: 90px;
+      border-radius: 16px;
+      &:hover{
+          cursor: pointer;
+          border: 2px solid v.$green;
+      }
+   }
+   &__previus{
+      @include mixins.image-btn(240px, -15px, true);
+   }
+   &__next{
+      @include mixins.image-btn(240px, 530px, true);
+   }
+
+}
