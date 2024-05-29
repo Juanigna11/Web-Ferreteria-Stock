@@ -6,6 +6,7 @@ let userInputNumber = 0;
 
 plusBtn.addEventListener('click', ()=>{
     userInputNumber++;
+    userInput.value = userInputNumber;
     console.log(userInputNumber);
 
 });
@@ -15,6 +16,7 @@ minusBtn.addEventListener('click', ()=>{
     if(userInputNumber <= 0){
         userInputNumber = 0;
     }
+    userInput.value = userInputNumber;
     console.log(userInputNumber);
 });
 
